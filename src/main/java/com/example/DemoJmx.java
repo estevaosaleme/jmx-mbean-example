@@ -28,7 +28,7 @@ public class DemoJmx implements DemoJmxMBean {
         DemoJmx demoService = new DemoJmx();
         ObjectName name;
         try {
-            name = new ObjectName("com.example.DemoJmx:type=DemoJmxMBean");
+            name = new ObjectName("com.example.DemoJmx:type=DemoJmxMBean,name=DemoJmxMetrics");
             mbs.registerMBean(demoService, name);
         } catch (MalformedObjectNameException | NotCompliantMBeanException | InstanceAlreadyExistsException | MBeanRegistrationException e) {
             e.printStackTrace();
